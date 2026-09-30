@@ -1,10 +1,11 @@
-# AGENTS.md — agent-doctor
+# AGENTS.md — nexa-doctor
 
 声明式一致性检查器。**验证**被声明的语义契约，**不定义**任何业务格式。
 
-本仓是通用工具，与具体产品无关 —— 它从 `demisugar-workspace` 拆出来，
-就是因为工具和产品机密不该放在一起（那边有 800+ 行产品定稿）。
-本仓可以公开发布二进制，消费方无需任何凭据即可下载。
+本仓继承 `demisugar-doctor`，原工具历史上从 `demisugar-workspace` 拆分，保持通用检查职责。
+本仓公开，不存放 Nexa 私有产品资料。当前 Go module 和发布配置尚待迁移，
+`agent-doctor` 命令名保留；来源与状态见 [BRAND_TRANSITION.md](BRAND_TRANSITION.md)。
+新仓发布就绪后，消费方再显式切换 release 地址、版本和校验和。
 
 ## 三个入口，职责互斥
 
